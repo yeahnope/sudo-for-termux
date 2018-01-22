@@ -9,5 +9,5 @@ cmd=$cmd"cd $PWD;"
 cmd=$cmd"stty sane;" 
 #cmd=$cmd"stty -brkint -imaxbel iutf8;"
 cmd=$cmd"stty iutf8;" #adds support for utf8 characters
-cmd=$cmd$1
+cmd=$cmd"$*"
 su -m -s $SHELL --login -c "$cmd"
