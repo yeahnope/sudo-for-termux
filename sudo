@@ -1,0 +1,13 @@
+#!/data/data/com.termux/files/usr/bin/bash
+cmd="resize > /dev/null;" #fixes terminal size
+cmd=$cmd"export LD_LIBRARY_PATH=$LD_LIBRARY_PATH;"
+cmd=$cmd"export PATH=$PATH;"
+cmd=$cmd"export TERM=$TERM;"
+cmd=$cmd"export HOME=/data/data/com.termux/files/home/.suroot;"
+cmd=$cmd"export LANG=$LANG;" #adds support for utf8 characters
+cmd=$cmd"cd $PWD;"
+cmd=$cmd"stty sane;" 
+#cmd=$cmd"stty -brkint -imaxbel iutf8;"
+cmd=$cmd"stty iutf8;" #adds support for utf8 characters
+cmd=$cmd$1
+su -m -s $SHELL --login -c "$cmd"
