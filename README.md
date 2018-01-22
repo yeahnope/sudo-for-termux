@@ -1,3 +1,3 @@
 # sudo-for-termux
 
-A sudo script that works pretty well on a nexus 5x and may or may not be compatible to other devices :)
+A sudo script for termux. Seems to work well with lineagos. Compatibility with other roms/su binaries is unkown.
